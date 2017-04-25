@@ -84,7 +84,6 @@ $this->fontdata = array(
 		'R' => "DejaVuSansCondensed.ttf",
 		'B' => "DejaVuSansCondensed-Bold.ttf",
 		'I' => "DejaVuSansCondensed-Oblique.ttf",
-		'BI' => "DejaVuSansCondensed-BoldOblique.ttf",
 		'useOTL' => 0xFF,
 		'useKashida' => 75,
 	),
@@ -92,7 +91,6 @@ $this->fontdata = array(
 		'R' => "Garuda.ttf",
 		'B' => "Garuda-Bold.ttf",
 		'I' => "Garuda-Oblique.ttf",
-		'BI' => "Garuda-BoldOblique.ttf",
 		'useOTL' => 0xFF,
 	),
 	/* Arabic fonts */
@@ -100,7 +98,6 @@ $this->fontdata = array(
 		'R' => "XB Riyaz.ttf",
 		'B' => "XB RiyazBd.ttf",
 		'I' => "XB RiyazIt.ttf",
-		'BI' => "XB RiyazBdIt.ttf",
 		'useOTL' => 0xFF,
 		'useKashida' => 75,
 	),
