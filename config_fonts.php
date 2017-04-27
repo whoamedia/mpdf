@@ -105,6 +105,9 @@ $this->fontdata = array(
 	"simsun" => array(
 		'R' => "SimSun.ttf",
 	),
+	"unbatang" => array(/* Korean */
+		'R' => "UnBatang_0613.ttf",
+	),
 );
 
 
