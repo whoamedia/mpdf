@@ -13729,7 +13729,7 @@ class mPDF
 			$lh = $this->_getNormalLineheight();
 		}
 		if (preg_match('/mm/', $lh)) {
-			return (($lh + 0.0) / $k); // convert to number
+			return ((floatval($lh)) / $k); // convert to number
 		} elseif ($lh > 0) {
 			return ($fs * $lh);
 		}
@@ -13770,7 +13770,7 @@ class mPDF
 			$lineheight = ($fontsize * $lh);
 			$leading += $linegap; // specified in hhea or sTypo in OpenType tables	****************************************
 		} elseif (preg_match('/mm/', $CSSlineheight)) {
-			$lineheight = (($CSSlineheight + 0.0) / $shrin_k);
+			$lineheight = ((floatval($CSSlineheight)) / $shrin_k);
 		} // convert to number
 		// ??? If lineheight is a factor e.g. 1.3  ?? use factor x 1em or ? use 'normal' lineheight * factor ******************************
 		// Could depend on value for $text_height - a draft CSS value as set above for now
