@@ -17070,10 +17070,10 @@ class mPDF
 			/* -- END BACKGROUNDS -- */
 
 			//================================================================
-			$y = $cont_y + $bbox_top + $bbox_mt + $bbox_bt + $bbox_pt;
-			$h = $cont_h - $bbox_top - $bbox_mt - $bbox_bt - $bbox_pt - $bbox_pb - $bbox_bb - $bbox_mb - $bbox_bottom;
+			$y = $cont_y + (int) $bbox_top + $bbox_mt + $bbox_bt + $bbox_pt;
+			$h = $cont_h - (int) $bbox_top - $bbox_mt - $bbox_bt - $bbox_pt - $bbox_pb - $bbox_bb - $bbox_mb - $bbox_bottom;
 			$x = $cont_x + $bbox_left + $bbox_ml + $bbox_bl + $bbox_pl;
-			$w = $cont_w - $bbox_left - $bbox_ml - $bbox_bl - $bbox_pl - $bbox_pr - $bbox_br - $bbox_mr - $bbox_right;
+			$w = $cont_w - (int) $bbox_left - $bbox_ml - $bbox_bl - $bbox_pl - $bbox_pr - $bbox_br - $bbox_mr - (int) $bbox_right;
 			// Set (temporary) values for x y w h to do first paint, if values are auto
 			if ($inner_h === 'auto' && $bbox_top === 'auto') {
 				$y = $cont_y + $bbox_mt + $bbox_bt + $bbox_pt;
@@ -17089,7 +17089,7 @@ class mPDF
 				$x = $cont_x + $bbox_left + $bbox_ml + $bbox_bl + $bbox_pl;
 				$w = $cont_w - ($bbox_left + $bbox_ml + $bbox_mr + $bbox_bl + $bbox_br + $bbox_pl + $bbox_pr);
 			}
-			$bbox_y = $cont_y + $bbox_top + $bbox_mt;
+			$bbox_y = $cont_y + (int) $bbox_top + $bbox_mt;
 			$bbox_x = $cont_x + $bbox_left + $bbox_ml;
 			$saved_block1 = $this->blk[1];
 			unset($p);
@@ -17120,7 +17120,7 @@ class mPDF
 					$x = $inner_x;
 				}
 				$w = $inner_w;
-				$bbox_y = $cont_y + $bbox_top + $bbox_mt;
+				$bbox_y = $cont_y + (int) $bbox_top + $bbox_mt;
 				$bbox_x = $cont_x + $bbox_left + $bbox_ml;
 			}
 
